@@ -1,0 +1,270 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #2b2b2b;
+  background-color: #f8fff8;
+  background-image: url('Resources/Greenerybackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Header */
+header {
+  background-color: #1e4620;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+header .logo h1 {
+  font-size: 1.8em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #88a56d;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('Resources/cart.jpg') center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  border-radius: 10px;
+}
+
+.hero-text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Add circular logo above cart container for branding */
+.cart-section::before {
+    content: "";
+    display: block;
+    width: 180px;     
+    height: 180px;
+    background-image: url('Resources/Logo.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;      
+    margin: 0 auto 20px auto;    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+
+/* Cart Section */
+.cart-section {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.cart-section h2 {
+  color: #1e4620;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.cart-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #2c5f2d;
+  color: white;
+}
+
+.cart-table tr:nth-child(even) {
+  background-color: #f0fff0;
+}
+
+.cart-table tr:hover {
+  background-color: #d8f0d8;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: transparent;
+  color: #e57373;
+  border: 1px solid #e57373;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #e57373;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Booking Details */
+.booking-details {
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f0fff0;
+}
+
+.booking-details h3 {
+  color: #2c5f2d;
+  margin-bottom: 15px;
+}
+
+.booking-details p {
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+/* Buttons */
+.confirm-btn,
+.add-btn,
+.update-btn {
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+/* Green Buttons (Update & Confirm) */
+.update-btn,
+.confirm-btn {
+  background-color: #1e4620; /* header green */
+  color: #fff;
+}
+
+.update-btn:hover,
+.confirm-btn:hover {
+  background-color: #2c5f2d;
+  transform: translateY(-2px);
+}
+
+/* Add Button (Blue) */
+.add-btn {
+  background-color: #5bc0de; /* light blue */
+  color: #fff;
+}
+
+.add-btn:hover {
+  background-color: #31b0d5;
+}
+
+/* Disabled */
+.confirm-btn:disabled,
+.update-btn:disabled,
+.add-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #1e4620;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer .socials a {
+  color: #97bc62;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6em;
+  }
+
+  .cart-table th, .cart-table td {
+    padding: 8px 10px;
+  }
+}
